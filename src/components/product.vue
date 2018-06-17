@@ -46,15 +46,9 @@ export default{
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-.table-shop > th {
-  text-align: center
-}
-.item-wrapper {
-  display:flex;
-  background:#dfdfdf;
-  align-items:center;
-}
-.item {
-  flex: 1;
-}
+.table{width:90%;margin:20px auto;border:1px solid #ddd;border-collapse: collapse;}
+.table th{color:#fff;background:#0072ff;}
+.table td,.table th{border:1px solid #ddd;padding:10px 0; }
+.table .btn{display:inline;border-radius:5px;padding:3px 5px;color:#fff;background:#ff7b2b;  cursor:pointer;}
 </style>
+ff7b2b

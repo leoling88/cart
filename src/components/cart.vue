@@ -1,7 +1,7 @@
 <template>
     <div>
         <h4>已选商品</h4>
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered" cellspacing="0">
             <thead>
                 <tr>
                     <th>id</th>
@@ -48,5 +48,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.table{width:90%;margin:20px auto;border:1px solid #ddd;border-collapse: collapse;}
+.table th{color:#fff;background:#0072ff;}
+.table td,.table th{border:1px solid #ddd;padding:10px 0; }
+.table .btn{display:inline;border-radius:5px;padding:3px 5px;color:#000;background:#ddd;  cursor:pointer;}
 </style>
