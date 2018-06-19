@@ -16,7 +16,8 @@ const state = {
 			price: 49
 		}
 	],
-	added:[]
+	added:[],
+	whethersub: '确定要执行此操作吗?'
 }
 //getters 抛出去的数据
 const getters = {
@@ -84,23 +85,24 @@ const mutations = {
 	},
 	//清除购物车
 	clearAll(state){
-		state.added = []
+		if(confirm(state.whethersub)){
+			state.added = []
+		}
 	},
 	//删除购物车的指定商品
-	del(state,product){
-		
-
-		state.added.forEach((n,i)=>{
-			if(n.id == product.id){
-				if(n.num > 1){
-					n.num --
-				}else{
-				 state.added.splice(i,1)
-
+	del(state,product){   	//提示是否继续删除
+			state.added.forEach((n,i)=>{
+				if(n.id == product.id){
+					if(n.num > 1){
+						n.num --
+					}else{
+						if(confirm(state.whethersub)){
+							state.added.splice(i,1)
+						};
+					}
 				}
-			}
 
-		})
+			})			
 	}
 
 
